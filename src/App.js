@@ -5,7 +5,7 @@ import AddCounter from "./components/AddCounter";
 const App = () => {
   return (
     <div className="App">
-      <h1>Hello World! 이제 성공함</h1>
+      <h1>Hello World! 이제 성공함!</h1>
       <AddCounter />
     </div>
   );
