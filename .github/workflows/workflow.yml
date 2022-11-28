@@ -21,7 +21,7 @@ jobs:
         run: npm install && npm run build
 
       - name: Deploy
-        uses: dong-geon-Lee/guess-number-app
+        uses: dong-geon-Lee/guess-number-app@2.37
         with:
           branch: gh-pages
           folder: build
