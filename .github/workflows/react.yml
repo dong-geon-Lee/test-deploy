@@ -22,7 +22,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: "./react.yml"
+        working-directory: ".github/workflows/react.yml"
 
     steps:
       - uses: actions/checkout@v3
