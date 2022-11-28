@@ -1,60 +1,53 @@
 name: CI/CD
 
-# action 트리거 조건 (release 브랜치에 푸쉬될 때)
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
-# action 동작
 jobs:
-  # OS 환경
   build:
     name: Build
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          
 
-      # 모듈 설치
       - name: Install dependencies
         run: npm install
-      # testcode 실행
-      - name: Run test codes
+
+      - name: Run the tests
         run: npm test
-      # 빌드
+
       - name: Build
         run: npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
-        with: 
+        with:
           name: production-files
-          path: ./build  
+          path: ./build
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./build
 
-      
-      deploy: 
-        name: Deploy
-        runs-on: ubuntu-latest
-        needs: build 
-        steps: 
-          - name: Download artifact
-            uses: actions/download-artifact@v2
-            with: 
-              name: production-files 
-              path: ./build
-
-          - name: Deploy gh-pages 
-            uses: peaceiris/actions-gh-pages@v3
-            with: 
-              github_token: ${{ secrets.GITHUB_TOKEN }}
-              publish_dir: ./build
-              publish_branch: gh-pages
+      - name: Deploy gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
