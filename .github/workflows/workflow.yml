@@ -21,7 +21,7 @@ jobs:
         run: npm install && npm run build
 
       - name: Deploy
-        uses: dong-geon-Lee/guess-number-app@${{ github.event.release.tag_name }}
+        uses: dong-geon-Lee/guess-number-app${github.event.release.tag_name}
         with:
           branch: gh-pages
           folder: build
