@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/guess-number-app/static/css/main.31d6cfe0.css",
-    "main.js": "/guess-number-app/static/js/main.d9850ee8.js",
+    "main.js": "/guess-number-app/static/js/main.4fee3c1c.js",
     "static/js/787.e61953ad.chunk.js": "/guess-number-app/static/js/787.e61953ad.chunk.js",
     "index.html": "/guess-number-app/index.html",
-    "main.d9850ee8.js.map": "/guess-number-app/static/js/main.d9850ee8.js.map",
+    "main.4fee3c1c.js.map": "/guess-number-app/static/js/main.4fee3c1c.js.map",
     "787.e61953ad.chunk.js.map": "/guess-number-app/static/js/787.e61953ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.d9850ee8.js"
+    "static/js/main.4fee3c1c.js"
   ]
 }
