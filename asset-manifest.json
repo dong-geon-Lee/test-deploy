@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/guess-number-app/static/css/main.31d6cfe0.css",
-    "main.js": "/guess-number-app/static/js/main.17fd9552.js",
-    "static/js/787.e61953ad.chunk.js": "/guess-number-app/static/js/787.e61953ad.chunk.js",
-    "index.html": "/guess-number-app/index.html",
-    "main.17fd9552.js.map": "/guess-number-app/static/js/main.17fd9552.js.map",
-    "787.e61953ad.chunk.js.map": "/guess-number-app/static/js/787.e61953ad.chunk.js.map"
+    "main.css": "/deploy-test/static/css/main.073c9b0a.css",
+    "main.js": "/deploy-test/static/js/main.d7c7111c.js",
+    "static/js/787.fd125e1a.chunk.js": "/deploy-test/static/js/787.fd125e1a.chunk.js",
+    "index.html": "/deploy-test/index.html",
+    "main.073c9b0a.css.map": "/deploy-test/static/css/main.073c9b0a.css.map",
+    "main.d7c7111c.js.map": "/deploy-test/static/js/main.d7c7111c.js.map",
+    "787.fd125e1a.chunk.js.map": "/deploy-test/static/js/787.fd125e1a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.17fd9552.js"
+    "static/css/main.073c9b0a.css",
+    "static/js/main.d7c7111c.js"
   ]
 }
