@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <h2>시작좀 합시다! go</h2>
+      <h2>2번쨰 배포</h2>
     </div>
   );
 }
